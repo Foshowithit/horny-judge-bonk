@@ -1,0 +1,79 @@
+<svg viewBox="0 0 512 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main desk structure -->
+  <defs>
+    <linearGradient id="woodGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#D2691E;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#CD853F;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#A0522D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8B4513;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="darkWood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#A0522D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Base platform -->
+  <rect x="0" y="200" width="512" height="56" fill="url(#darkWood)" />
+  <rect x="0" y="200" width="512" height="8" fill="#D2691E" />
+
+  <!-- Left side panel -->
+  <rect x="8" y="120" width="120" height="80" fill="url(#woodGradient)" />
+  <rect x="16" y="140" width="104" height="48" fill="url(#darkWood)" stroke="#8B4513" stroke-width="2" />
+  <rect x="24" y="148" width="88" height="32" fill="url(#woodGradient)" stroke="#654321" stroke-width="1" />
+
+  <!-- Right side panel -->
+  <rect x="384" y="120" width="120" height="80" fill="url(#woodGradient)" />
+  <rect x="392" y="140" width="104" height="48" fill="url(#darkWood)" stroke="#8B4513" stroke-width="2" />
+  <rect x="400" y="148" width="88" height="32" fill="url(#woodGradient)" stroke="#654321" stroke-width="1" />
+
+  <!-- Center desk top -->
+  <rect x="128" y="100" width="256" height="20" fill="url(#goldGradient)" />
+
+  <!-- Main center panel -->
+  <rect x="136" y="120" width="240" height="80" fill="url(#woodGradient)" />
+
+  <!-- Center decorative panel -->
+  <rect x="156" y="140" width="200" height="48" fill="url(#darkWood)" stroke="#8B4513" stroke-width="2" />
+  <rect x="164" y="148" width="184" height="32" fill="url(#woodGradient)" stroke="url(#goldGradient)" stroke-width="2" />
+
+  <!-- Scales of justice emblem -->
+  <circle cx="256" cy="164" r="24" fill="url(#darkWood)" stroke="url(#goldGradient)" stroke-width="2" />
+
+  <!-- Scales post -->
+  <rect x="254" y="150" width="4" height="20" fill="url(#goldGradient)" />
+
+  <!-- Scale pans -->
+  <ellipse cx="244" cy="154" rx="8" ry="3" fill="url(#goldGradient)" />
+  <ellipse cx="268" cy="154" rx="8" ry="3" fill="url(#goldGradient)" />
+
+  <!-- Scale chains -->
+  <line x1="246" y1="152" x2="254" y2="150" stroke="url(#goldGradient)" stroke-width="1" />
+  <line x1="266" y1="152" x2="258" y2="150" stroke="url(#goldGradient)" stroke-width="1" />
+  <line x1="248" y1="152" x2="256" y2="150" stroke="url(#goldGradient)" stroke-width="1" />
+  <line x1="264" y1="152" x2="256" y2="150" stroke="url(#goldGradient)" stroke-width="1" />
+
+  <!-- Justice symbol -->
+  <path d="M 256 158 L 256 170" stroke="url(#goldGradient)" stroke-width="2" />
+  <path d="M 252 170 L 260 170" stroke="url(#goldGradient)" stroke-width="2" />
+
+  <!-- Top gavel block -->
+  <rect x="100" y="90" width="16" height="12" rx="2" fill="url(#darkWood)" />
+  <rect x="102" y="92" width="12" height="8" fill="url(#woodGradient)" />
+
+  <!-- Wood grain details -->
+  <line x1="20" y1="150" x2="108" y2="150" stroke="#654321" stroke-width="0.5" opacity="0.3" />
+  <line x1="20" y1="165" x2="108" y2="165" stroke="#654321" stroke-width="0.5" opacity="0.3" />
+  <line x1="404" y1="150" x2="492" y2="150" stroke="#654321" stroke-width="0.5" opacity="0.3" />
+  <line x1="404" y1="165" x2="492" y2="165" stroke="#654321" stroke-width="0.5" opacity="0.3" />
+
+  <!-- Shadow effects -->
+  <rect x="8" y="195" width="120" height="5" fill="#654321" opacity="0.3" />
+  <rect x="384" y="195" width="120" height="5" fill="#654321" opacity="0.3" />
+  <rect x="136" y="195" width="240" height="5" fill="#654321" opacity="0.3" />
+</svg>

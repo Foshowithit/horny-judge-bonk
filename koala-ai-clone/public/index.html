@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Test Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #000;
+      color: #fff;
+    }
+    h1 {
+      color: #FF6A00;
+    }
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .image-item {
+      border: 1px solid #FF6A00;
+      padding: 10px;
+      border-radius: 8px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 3px solid red;
+    }
+  </style>
+</head>
+<body>
+  <h1>BONK'D Image Test Page</h1>
+  <p>This page tests direct image serving from reliable external sources</p>
+
+  <div class="image-container">
+    <div class="image-item">
+      <h2>Original Doge Meme (Wikipedia)</h2>
+      <img src="https://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg" alt="Original Doge Meme">
+    </div>
+
+    <div class="image-item">
+      <h2>Kabosu - Doge (Asahi News)</h2>
+      <img src="https://p.potaufeu.asahi.com/3958-p/picture/28182511/2fac4d094698b4680d26eb3d85b3ee34.jpg" alt="Kabosu Doge">
+    </div>
+
+    <div class="image-item">
+      <h2>Shiba Inu (washingtonpost)</h2>
+      <img src="https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/FOTRA5NREBF7XFA73QEULCVWYI.jpg" alt="Shiba Inu">
+    </div>
+  </div>
+</body>
+</html>

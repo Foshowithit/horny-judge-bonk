@@ -1,0 +1,2 @@
+This is a placeholder file. The actual image can't be directly created via text editing.
+We need to use a different approach to add the actual image files to the project.

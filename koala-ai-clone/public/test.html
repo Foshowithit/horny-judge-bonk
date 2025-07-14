@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #111;
+            color: white;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .image-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .image-card {
+            border: 2px solid #ff6a00;
+            border-radius: 8px;
+            padding: 10px;
+            background: #222;
+        }
+        .image-card img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .image-info {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Test Page</h1>
+    <p>This page tests if all images in the public/images directory are accessible. If you see all images below, they are properly being served.</p>
+
+    <div class="image-container">
+        <div class="image-card">
+            <img src="/images/bonk-pfp.png" alt="Bonk PFP">
+            <div class="image-info">
+                <p><strong>Path:</strong> /images/bonk-pfp.png</p>
+                <p><strong>Status:</strong> <span id="status-bonk-pfp">Loading...</span></p>
+            </div>
+        </div>
+
+        <div class="image-card">
+            <img src="/images/bonk-main-meme.png" alt="Bonk Main Meme">
+            <div class="image-info">
+                <p><strong>Path:</strong> /images/bonk-main-meme.png</p>
+                <p><strong>Status:</strong> <span id="status-bonk-main-meme">Loading...</span></p>
+            </div>
+        </div>
+
+        <div class="image-card">
+            <img src="/images/bonk-dog.png" alt="Bonk Dog">
+            <div class="image-info">
+                <p><strong>Path:</strong> /images/bonk-dog.png</p>
+                <p><strong>Status:</strong> <span id="status-bonk-dog">Loading...</span></p>
+            </div>
+        </div>
+
+        <div class="image-card">
+            <img src="/images/bonk-meme.png" alt="Bonk Meme">
+            <div class="image-info">
+                <p><strong>Path:</strong> /images/bonk-meme.png</p>
+                <p><strong>Status:</strong> <span id="status-bonk-meme">Loading...</span></p>
+            </div>
+        </div>
+
+        <div class="image-card">
+            <img src="/images/bonk-dog-fresh.png" alt="Bonk Dog Fresh">
+            <div class="image-info">
+                <p><strong>Path:</strong> /images/bonk-dog-fresh.png</p>
+                <p><strong>Status:</strong> <span id="status-bonk-dog-fresh">Loading...</span></p>
+            </div>
+        </div>
+
+        <div class="image-card">
+            <img src="/images/bonk-main-meme-fresh.png" alt="Bonk Main Meme Fresh">
+            <div class="image-info">
+                <p><strong>Path:</strong> /images/bonk-main-meme-fresh.png</p>
+                <p><strong>Status:</strong> <span id="status-bonk-main-meme-fresh">Loading...</span></p>
+            </div>
+        </div>
+
+        <div class="image-card">
+            <img src="/images/bonk-pfp-fresh.png" alt="Bonk PFP Fresh">
+            <div class="image-info">
+                <p><strong>Path:</strong> /images/bonk-pfp-fresh.png</p>
+                <p><strong>Status:</strong> <span id="status-bonk-pfp-fresh">Loading...</span></p>
+            </div>
+        </div>
+
+        <div class="image-card">
+            <img src="/images/dlom8jkhzcs-image.png" alt="Uploaded Image 1">
+            <div class="image-info">
+                <p><strong>Path:</strong> /images/dlom8jkhzcs-image.png</p>
+                <p><strong>Status:</strong> <span id="status-uploaded-image-1">Loading...</span></p>
+            </div>
+        </div>
+
+        <div class="image-card">
+            <img src="/images/ydze7v8l6is-image.png" alt="Uploaded Image 2">
+            <div class="image-info">
+                <p><strong>Path:</strong> /images/ydze7v8l6is-image.png</p>
+                <p><strong>Status:</strong> <span id="status-uploaded-image-2">Loading...</span></p>
+            </div>
+        </div>
+
+        <div class="image-card">
+            <img src="/images/Untitled_design_(36).png" alt="Uploaded Image 3">
+            <div class="image-info">
+                <p><strong>Path:</strong> /images/Untitled_design_(36).png</p>
+                <p><strong>Status:</strong> <span id="status-uploaded-image-3">Loading...</span></p>
+            </div>
+        </div>
+
+        <div class="image-card">
+            <img src="/images/Untitled_design_(33).png" alt="Uploaded Image 4">
+            <div class="image-info">
+                <p><strong>Path:</strong> /images/Untitled_design_(33).png</p>
+                <p><strong>Status:</strong> <span id="status-uploaded-image-4">Loading...</span></p>
+            </div>
+        </div>
+
+        <div class="image-card">
+            <img src="/images/Screenshot_2025-05-16_at_1.28.03_PM.png" alt="Uploaded Image 5">
+            <div class="image-info">
+                <p><strong>Path:</strong> /images/Screenshot_2025-05-16_at_1.28.03_PM.png</p>
+                <p><strong>Status:</strong> <span id="status-uploaded-image-5">Loading...</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check if images loaded successfully
+        document.querySelectorAll('.image-card img').forEach(img => {
+            const statusId = 'status-' + img.alt.toLowerCase().replace(/\s+/g, '-');
+            const statusElement = document.getElementById(statusId);
+
+            img.onload = function() {
+                if (statusElement) {
+                    statusElement.textContent = 'Loaded successfully ✅';
+                    statusElement.style.color = '#4CAF50';
+                }
+            };
+
+            img.onerror = function() {
+                if (statusElement) {
+                    statusElement.textContent = 'Failed to load ❌';
+                    statusElement.style.color = '#F44336';
+                }
+            };
+        });
+    </script>
+</body>
+</html>
